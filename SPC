@@ -1,0 +1,10 @@
+import random
+u = input()
+ch = u[0]
+c = random.choice('spc')
+if ch == 's' and c == 'c' or ch == 'p' and c == 's' or ch == 'c' and c == 'p':
+    print('Ты выиграл!')
+elif ch == c:
+    print('Ничья!')
+else:
+    print('Ты проиграл!')

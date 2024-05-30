@@ -1,12 +1,26 @@
 import random
 a = random.randint(0,10)
-print("Угадай число:)")
-while True:
-    b = int(input("Твое число: "))
-    if a == b:
-        print("Ты выиграл!")
-        break
-    elif a < b:
-        print("Мое число меньше:)")
-    elif a > b:
-        print("Мое число больше:)")
+def start():
+    print("привет! Хочешь поиграть в \"Угадай Число\"?")
+    ans = input("Напиши \"Да\" или \"Нет\" ")
+    if ans == "Да":
+        compare()
+    else:
+        print("В следующий раз")
+def compare():
+   while True:
+       b = int(input("Твое число: "))
+       if a == b:
+           print("Ты выиграл!")
+           pagain()
+       elif a < b:
+           print("Мое число меньше:)")
+       elif a > b:
+           print("Мое число больше:)")
+  def pagain():
+    ans1 = input("Хочешь еще раз ?")
+    if ans1 == "Да":
+        compare()
+    else:
+        print("В следующий раз")
+start()

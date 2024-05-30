@@ -1,3 +1,9 @@
+import random
+list = ["Камень", "Ножницы", "Бумага"]
+def start():
+    print("привет! Хочешь поиграть?")
+    ans = input("Напиши \"Да\" или \"Нет\" ")
+    if ans == "Да":
         compare()
     else:
         print("В следующий раз")

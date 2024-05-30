@@ -1,0 +1,22 @@
+        compare()
+    else:
+        print("В следующий раз")
+def compare():
+    us = input("Сделай выбор")
+    comp = random.choice(list)
+    if us == "Камень" and comp == "Ножницы" or us == "Ножницы" and comp == "Бумага" or us == "Бумага" and comp == "Камень":
+        print("Ты выиграл!")
+        pagain()
+    elif us == comp:
+        print("Ничья! Попробуй еще раз")
+        pagain()
+    else:
+        print("Ты выиграл! Попробуй еще раз")
+        pagain()
+def pagain():
+    ans1 = input("Хочешь еще раз")
+    if ans1 == "Да":
+        compare()
+    else:
+        print("В следующий раз")
+start()

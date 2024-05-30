@@ -1,0 +1,12 @@
+import random
+a = random.randint(0,10)
+print("Угадай число:)")
+while True:
+    b = int(input("Твое число: "))
+    if a == b:
+        print("Ты выиграл!")
+        break
+    elif a < b:
+        print("Мое число меньше:)")
+    elif a > b:
+        print("Мое число больше:)")

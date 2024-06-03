@@ -1,23 +1,23 @@
 import random
 list = ["камень", "ножницы", "бумага"]
 def start():
-    print("привет! Хочешь поиграть?")
+    print("Привет! Хочешь поиграть?")
     ans = input("Напиши \"Да\" или \"Нет\" ")
     if ans.lower() == "да":
         compare()
     else:
         print("В следующий раз")
 def compare():
-    us = input("Сделай выбор")
+    us = input("Сделай выбор: камень, ножницы или бумага? ")
     comp = random.choice(list)
     if us.lower() == "камень" and comp == "ножницы" or us.lower() == "ножницы" and comp == "бумага" or us.lower() == "бумага" and comp == "камень":
-        print("Твой выбор:{0}, а мой выбор:{1}. Ты выиграл! Попробуй еще раз.".format(us, comp))
+        print(f"Твой выбор: {us}, а мой выбор: {comp}. Ты выиграл! Попробуй еще раз.")
         pagain()
     elif us.lower() == comp:
-        print(("Твой выбор:{0}, а мой выбор:{1}. Ничья. Попробуй еще раз.".format(us, comp)))
+        print(f"Твой выбор:{us}, а мой выбор:{comp}. Ничья. Попробуй еще раз.")
         pagain()
     else:
-        print(("Твой выбор:{0}, а мой выбор:{1}. Ты проиграл! Попробуй еще раз.".format(us, comp)))
+        print(f"Твой выбор:{us}, а мой выбор:{comp}. Ты проиграл! Попробуй еще раз.")
         pagain()
 def pagain():
     ans1 = input("Хочешь еще раз?")

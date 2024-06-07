@@ -12,17 +12,26 @@ def compare():
     comp = random.choice(list)
     if us.lower() == "камень" and comp == "ножницы" or us.lower() == "ножницы" and comp == "бумага" or us.lower() == "бумага" and comp == "камень":
         print(f"Твой выбор: {us}, а мой выбор: {comp}. Ты выиграл! Попробуй еще раз.")
-        pagain()
+        ans1 = input("Хочешь еще раз?")
+        if ans1.lower() == "да":
+            compare()
+#        pagain()
     elif us.lower() == comp:
-        print(f"Твой выбор:{us}, а мой выбор:{comp}. Ничья. Попробуй еще раз.")
-        pagain()
+        print(f"Твой выбор: {us}, а мой выбор: {comp}. Ничья. Попробуй еще раз.")
+        ans1 = input("Хочешь еще раз?")
+        if ans1.lower() == "да":
+            compare()
+#        pagain()
     else:
-        print(f"Твой выбор:{us}, а мой выбор:{comp}. Ты проиграл! Попробуй еще раз.")
-        pagain()
-def pagain():
+        print(f"Твой выбор: {us}, а мой выбор: {comp}. Ты проиграл! Попробуй еще раз.")
+        ans1 = input("Хочешь еще раз?")
+        if ans1.lower() == "да":
+            compare()
+#        pagain()
+"""def pagain():
     ans1 = input("Хочешь еще раз?")
     if ans1.lower() == "да":
         compare()
     else:
-        print("В следующий раз")
+        print("В следующий раз")"""
 start()

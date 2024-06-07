@@ -1,26 +1,35 @@
 import random
-a = random.randint(0,10)
 def start():
     print("привет! Хочешь поиграть в \"Угадай Число\"?")
     ans = input("Напиши \"Да\" или \"Нет\" ")
-    if ans == "Да":
+    if ans.lower() == "да":
         compare()
-    else:
+    elif ans.lower() == "нет":
         print("В следующий раз")
+    elif ans.lower()!= "да" or ans.lower()!= "нет":
+               ans1 = input("Неправильный ввод. Повторите:")
 def compare():
+   a = random.randint(0,10)
    while True:
        b = int(input("Твое число: "))
        if a == b:
            print("Ты выиграл!")
-           pagain()
+           ans1 = input("Хочешь еще раз ?")
+           if ans1.lower() == "да":
+               compare()
+           elif ans1.lower() == "нет":
+               print("В следующий раз")
+               break
+           elif ans1.lower()!= "да" or ans1.lower()!= "нет":
+               ans1 = input("Неправильный ввод. Повторите:")
        elif a < b:
            print("Мое число меньше:)")
        elif a > b:
            print("Мое число больше:)")
-  def pagain():
+"""  def pagain():
     ans1 = input("Хочешь еще раз ?")
     if ans1 == "Да":
         compare()
     else:
-        print("В следующий раз")
+        print("В следующий раз")"""
 start()

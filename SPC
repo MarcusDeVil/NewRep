@@ -8,9 +8,12 @@ def start():
        else:
           break
 def namechoice():
-    us = input("Сделай выбор: камень, ножницы или бумага? ")
-    comp = random.choice(list)
-    compare(us, comp)
+    while True:
+       us = input("Сделай выбор: камень, ножницы или бумага? ")
+       if us.lower() in list:
+          comp = random.choice(list)
+          compare(us, comp)
+          break
 def takeanswer():
     while True:
        ans = input("Напиши \"Да\" или \"Нет\"")

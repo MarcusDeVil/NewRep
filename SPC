@@ -2,27 +2,31 @@ import random
 list = ["камень", "ножницы", "бумага"]
 def start():
     print("Привет! Хочешь поиграть?")
-    takeanswer()
+    while True:
+    if takeanswer():
+       namechoice()
+    else:
+       break
 def namechoice():
     us = input("Сделай выбор: камень, ножницы или бумага? ")
     comp = random.choice(list)
     compare(us, comp)
 def takeanswer():
-    ans = input("Напиши \"Да\" или \"Нет\"")
-    if ans.lower() == "да":
-        namechoice()
-    elif ans.lower() == "нет":
-        print("В следующий раз")
-    elif ans.lower() != "да" or ans.lower() != "нет":
-        ans = input("Неправильный ввод. Введите заново")
+    while True:
+       ans = input("Напиши \"Да\" или \"Нет\"")
+       if ans.lower() == "да":
+           namechoice()
+           return True
+       elif ans.lower() == "нет":
+           print("В следующий раз")
+           return False
+       else:
+           print("Неправильный ввод. Введите заново.")
 def compare(x, y):
        if x.lower() == "камень" and y == "ножницы" or x.lower() == "ножницы" and y == "бумага" or x.lower() == "бумага" and y == "камень":
            print(f"Твой выбор: {x}, а мой выбор: {y}. Ты выиграл! Хочешь еще раз?")
-           takeanswer()
        elif x.lower() == y:
            print(f"Твой выбор: {x}, а мой выбор: {y}. Ничья. Хочешь еще раз?")
-           takeanswer()
        else:
            print(f"Твой выбор: {x}, а мой выбор: {y}. Ты проиграл! Хочешь еще раз?")
-           takeanswer()
 start()

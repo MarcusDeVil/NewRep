@@ -13,8 +13,9 @@ def namechoice():
        if us.lower() in list:
           comp = random.choice(list)
           compare(us, comp)
-          print("Неправильный ввод. Введите заново.")
           break
+       else:
+           print("Неправильный ввод. Введите заново.")
 def takeanswer():
     while True:
        ans = input("Напиши \"Да\" или \"Нет\"")

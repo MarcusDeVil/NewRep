@@ -16,12 +16,13 @@ def takeanswer():
     elif ans.lower() != "да" or ans.lower() != "нет":
         ans = input("Неправильный ввод. Введите заново")
 def compare(x, y):
-    while True:
        if x.lower() == "камень" and y == "ножницы" or x.lower() == "ножницы" and y == "бумага" or x.lower() == "бумага" and y == "камень":
            print(f"Твой выбор: {x}, а мой выбор: {y}. Ты выиграл! Хочешь еще раз?")
+           takeanswer()
        elif x.lower() == y:
            print(f"Твой выбор: {x}, а мой выбор: {y}. Ничья. Хочешь еще раз?")
+           takeanswer()
        else:
            print(f"Твой выбор: {x}, а мой выбор: {y}. Ты проиграл! Хочешь еще раз?")
-    takeanswer()
+           takeanswer()
 start()

@@ -3,10 +3,10 @@ list = ["камень", "ножницы", "бумага"]
 def start():
     print("Привет! Хочешь поиграть?")
     while True:
-    if takeanswer():
-       namechoice()
-    else:
-       break
+       if takeanswer():
+          namechoice()
+       else:
+          break
 def namechoice():
     us = input("Сделай выбор: камень, ножницы или бумага? ")
     comp = random.choice(list)
@@ -15,7 +15,6 @@ def takeanswer():
     while True:
        ans = input("Напиши \"Да\" или \"Нет\"")
        if ans.lower() == "да":
-           namechoice()
            return True
        elif ans.lower() == "нет":
            print("В следующий раз")

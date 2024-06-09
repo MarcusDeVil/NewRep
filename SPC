@@ -13,6 +13,7 @@ def namechoice():
        if us.lower() in list:
           comp = random.choice(list)
           compare(us, comp)
+          print("Неправильный ввод. Введите заново.")
           break
 def takeanswer():
     while True:
